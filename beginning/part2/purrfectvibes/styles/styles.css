@@ -1,0 +1,156 @@
+/* Use an external style sheet for the placement of all style rules. 
+Place the style sheet in a folder called “styles”. 
+Move the inline style that’s currently attached to the body into this external style sheet as well.
+Add a width of 100% for all images. */
+
+body {
+  width: 960px;
+  max-width: 100%;
+  margin: 20px;
+}
+
+img {
+  width: 100%
+}
+
+/* All text should be Arial, Helvetica, sans-serif, the size of the text should be 1em, and the line height should be adjusted to 2em (double-spaced). */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 2em;
+}
+
+/* Adjust the main navigation menu so that it’s spaced correctly and that the list that the navigation menu is in is also formatted to look like my finished design. Add an active class and set the color to #222E50 (dark blue). Pay close attention to the margins/paddings or lack thereof. Also pay attention to the fact that the bullets have been removed from the list. When you begin to build out the Features page however, note that the bullets are missing from the navigation menu but remain in the lists within each feature's description.   */
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li ul {
+  padding-left: 2.7rem;
+}
+
+.active {
+  color: #222E50;
+}
+
+/* Stylize all of the headings on each web page. Colors that you will use here include #EFEFEF (light grey), #222E50 (dark blue), and #B3679B (purple). Note that headings also have a border, curved corners, and a slight padding on the left side of each heading. */
+
+h2 {
+  color: #b3679b;
+  background-color: #efefef;
+  border: 1px solid #222e50;
+  border-radius: 5px;
+  text-indent: 1rem;
+}
+
+
+/* this class is needed to match finished design given */
+h1 {
+  font-size: 1.5rem;
+}
+
+
+/* Change the color of all your hyperlinks to #B3679B (purple). */
+a {
+  color: #B3679B;
+}
+
+
+/* On the main page, set each features to 33% width. Add the appropriate border and border radius. Border color is #222E50 (dark blue). 
+Add a span with a class to each features’  title. Target the class and bold the title. Center the text. */
+
+.features p {
+  width: 33%;
+  border: 1px solid #222e50;
+  text-align: center;
+  border-radius: 35px;
+  padding: 2rem;
+}
+
+.feature-title {
+  font-weight: bold;
+}
+
+/* On the About Us page, use pseudo selectors on the table to select the first td in each row to add a background color #f2f2f2. Also be sure to add a padding 20px to all td. */
+
+table tr:nth-child(odd) td:first-child {
+  background-color: #f2f2f2;
+}
+
+table td {
+  padding: 20px;
+}
+
+/* 	On the features page, using just the class “feature-container” and pseudo elements, select each <p> and add your styles. Image width is 300px and border radius is 20px. */
+.feature-container {
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 1.1rem;
+  margin: 1.5rem;
+}
+
+.feature-container p {
+  text-align: left;
+}
+
+.feature-container ul {
+  list-style-type: disc;
+  margin-left: 5rem;
+}
+
+.feature-container p img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.feature-container > :nth-child(1) {
+  font-size: 1.3em;
+}
+
+.feature-container > :nth-child(1),
+.feature-container > :nth-child(2) {
+  text-align: center;
+}
+
+.feature-container > :nth-child(5) {
+  text-align: right;
+}
+
+/* The Community page will need a bit of modification. You’ll need to take advantage of the <section> element and “community” class that I’ve added for you here in order to attach styles to this element. The colors for the dividers are #7CA982, #E6A563, and #B36793. Additionally, you’ll need to wrap each community/event within a <div> element so you end up with 3 div elements…one for each event.  */
+
+.community div {
+  border: 1px solid #222E50;
+  width: 300px;
+  padding: .5rem;
+  border-radius:  10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.community h3,
+.community p>span:first-child {
+  font-weight: bold;
+}
+
+.community h3 {
+  padding-top: 1.5rem;
+  border-top: 10px solid #7CA982;
+}
+
+.community span:nth-of-type(2) {
+  font-style: italic;
+}
+
+.community :nth-child(2) h3 {
+  border-color: #E6A563;
+}
+
+.community :nth-child(3) h3 {
+  border-color: #B36793;
+}
+
+
+
